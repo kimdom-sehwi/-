@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Header and Main Layout</title>
+    <title>Header and Main Layout</title>
+    <style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        #wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+        .header#header {
+            position: sticky;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+            border-bottom: 0.75px solid black;
+            font-size: 1rem;
+            background-color: #f0f0f0;
+            height: 80px;
+            vertical-align: middle;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .title span:first-child {
+            font-size: 4rem; 
+            font-weight: 900;
+        }
+        .menu {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-right: 15px;
+            gap: 35px;
+        }
+        .menu a, .menu button {
+            font-size: 1rem;
+            text-decoration: none;
+            color: #000;
+        }
+        .menu input.search-input {
+            background-color: #FF5A00;
+            color: #fff;
+            border: none;
+            padding: 0px 1px;
+            border-radius: 30px;
+            width: 200px;
+            height: 40px;
+            text-align: center;
+            font-size: 1rem;
+            outline: none;
+        }
+        .menu input.search-input:focus {
+        }
+        #container {
+            margin-top: 10px;
+        }
+        header.header {
+            text-align: center;
+            transition: top 0.3s ease;
+            position: sticky;
+            grid-template-columns: auto 1fr auto auto;
+            justify-content: center;
+            align-items: center;
+            color: #FFFFFF;
+            padding: 1px;
+            top: 0;
+            width: 100%;
+            z-index: 6;
+            font-size: 1rem;
+            background-color: #FF5A00;
+            height: 43px;
+            vertical-align: middle;
+        }
+          .intro-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 15px;
+            background-color: #f0f0f0;
+            text-align: center;
+    }
+    .intro-section img {
+      max-width: 45%;
+      height: auto;
+      margin-bottom: 15px;
+    }
+        main#content {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+            grid-gap: 15px;
+            padding: 15px;
+            padding-bottom: calc(55px + 15px);
+            background-color: #f0f0f0 !important;
+        }
+
+
+        h1 {
+            display: block;
+            font-size: 1em;
+            margin-block-start: 0.67em;
+            margin-block-end: 0.67em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: light;
+            unicode-bidi: isolate;
+        }
+        .item {
+            background-color: #FF5A00;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 900;
+            font-size: clamp(4rem, 20vw, 12rem);
+            height: 200px;
+            line-height: 1.2;
+            overflow: hidden;
+        }
+        .item.dahan {
+      font-size: clamp(3rem, 10vw, 10rem) !important;
+        .item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <div class="title">
+                <span>🟑歷史茂識</span>
+            </div>
+            <div class="menu">
+                <span>대한 근대사 아카이브 <br> [無 를 지우고 茂를 하다]</span>
+                <input type="text" placeholder="Search..." class="search-input">
+                <a href="#">선택</a>
+            </div>
+        </header>
+
+        <div id="container">
+            <header class="header">
+                <h1 class="entry-title">✺열쇳말✺</h1>
+                <div class="archive-meta"></div>
+            </header>
+            <section class="intro-section">
+      <img src="dh.png" alt="Intro Image">
+      <p>대한의 역사에 대해서 알아야하며..어쩌구저쩌구 글 부분</p>
+    </section>
+
+            <main id="content" style="display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 15px; padding: 15px; padding-bottom: calc(55px + 15px); background-color: #ffffff;">
+              <style>
+                    .item {
+                        height: 200px;
+                    }
+                </style>
+                  <div class="item dahan">
+                    <p>대한헌법사</p>
+                </div>
+                <div class="item">
+                    <p>키워드2</p>
+                </div>
+                <div class="item">
+                    <p>키워드3</p>
+                </div>
+                <div class="item">
+                    <p>키워드4</p>
+                </div>
+                <div class="item">
+                    <p>키워드5</p>
+                </div>
+                <div class="item">
+                    <p>키워드6</p>
+                </div>
+                <div class="item">
+                    <p>키워드7</p>
+                </div>
+                <div class="item">
+                    <p>키워드8</p>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
